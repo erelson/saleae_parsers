@@ -1,5 +1,5 @@
 
-import parser
+import sliderparser
 
 import matplotlib as plt
 
@@ -10,16 +10,16 @@ from matplotlib import pyplot
 if __name__ == '__main__':
     #fr = open("quick.csv", 'r')
     #fr = open("SliderOutput2Mhz_001.csv", 'r')
-    #data, times = parser.get_packets(fr, 1, 0)
+    #data, times = sliderparser.get_packets(fr, 1, 0)
     #fr = open("SliderOutput_in_negToPos_25Msamp_8MHz.csv", 'r')
     fr = open("SliderOutput_mm_negToPos_25Msamp_8MHz_002.csv", 'r')
-    data, times = parser.get_packets(fr)
+    data, times = sliderparser.get_packets(fr)
     fr.close()
     #data = get_packets(fr)
     print len(data), "packets parsed"
     #for line in data[:10]: print line
 
-    numbers = parser.parse_packets(data, times)
+    numbers = sliderparser.parse_packets(data, times)
     #for number in numbers[:10]: print number
 
     #fig = plt.plot(times, numbers)
