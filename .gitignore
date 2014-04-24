@@ -1,3 +1,7 @@
 *.pyc
 *.*~
 .*.sw?
+
+
+# desktop files...
+.DS_Store
